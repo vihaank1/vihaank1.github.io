@@ -3,14 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <title>DogArmor AI</title>
+
   <style>
     body {
-      font-family: Arial;
-      max-width: 800px;
-      margin: 40px auto;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      background: #f8fafc;
+      color: #0f172a;
     }
-    h1, h2 { margin-top: 30px; }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+
+    p {
+      color: #475569;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .diagram {
+      background: #e2e8f0;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-family: monospace;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -19,46 +56,84 @@
 <h1>DogArmor AI</h1>
 <p><b>AI-powered dog gear recommendation system using pose estimation</b></p>
 
+<!-- PROBLEM -->
+<div class="section">
 <h2>Problem</h2>
 <p>
-Pet owners struggle to choose properly fitting and safe gear due to lack of personalized sizing and posture-based insights.
+Pet owners struggle to select properly fitting and safe gear due to lack of personalized sizing and posture-based insights.
+Most solutions rely on generic breed-based recommendations, which fail to account for real-world variation in posture and body structure.
 </p>
+</div>
 
+<!-- SOLUTION -->
+<div class="section">
 <h2>Solution</h2>
 <p>
-Built an end-to-end AI system using YOLO pose estimation to analyze dog posture and generate real-time gear recommendations.
+Designed and built an end-to-end AI system that analyzes dog posture using YOLO-based pose estimation and generates real-time gear recommendations.
+The system processes image inputs, extracts key body features, and maps them to optimized gear suggestions.
 </p>
+</div>
 
+<!-- TECH STACK -->
+<div class="section">
 <h2>Tech Stack</h2>
 <p>
-Python, Flask, YOLO, Azure
+Python, Flask, YOLO (Computer Vision), Azure
 </p>
+</div>
 
-<h2>Architecture</h2>
+<!-- ARCHITECTURE -->
+<div class="section">
+<h2>System Architecture</h2>
+
+<div class="diagram">
+Image Input → YOLO Pose Model → Feature Extraction → Flask API → Recommendation Engine → Output
+</div>
+
 <p>
-Image Input → YOLO Model → Flask API → Recommendation Output
+Built a modular pipeline separating model inference, feature extraction, and API logic to enable independent scaling and future model upgrades.
 </p>
+</div>
 
+<!-- IMPACT -->
+<div class="section">
 <h2>Impact</h2>
 <ul>
-  <li>Real-time inference with low latency</li>
-  <li>Scalable backend for continuous model updates</li>
-  <li>Improved recommendation accuracy through iterative training</li>
+  <li>Enabled real-time recommendation generation with low-latency inference</li>
+  <li>Designed scalable backend architecture for iterative model improvements</li>
+  <li>Reduced reliance on manual sizing by automating posture-based analysis</li>
 </ul>
+</div>
 
+<!-- CHALLENGES -->
+<div class="section">
 <h2>Challenges</h2>
 <ul>
-  <li>Pose estimation accuracy across dog breeds</li>
-  <li>Data labeling and dataset quality</li>
-  <li>Latency optimization for real-time inference</li>
+  <li>Maintaining pose estimation accuracy across diverse dog breeds and positions</li>
+  <li>Building a reliable labeled dataset for training and evaluation</li>
+  <li>Optimizing inference latency for near real-time performance</li>
 </ul>
+</div>
 
+<!-- ENGINEERING DEPTH -->
+<div class="section">
+<h2>Engineering Decisions</h2>
+<ul>
+  <li>Chose YOLO for fast inference speed over heavier models</li>
+  <li>Separated model and API layers for scalability</li>
+  <li>Designed pipeline to support continuous retraining and dataset expansion</li>
+</ul>
+</div>
+
+<!-- FUTURE -->
+<div class="section">
 <h2>Future Improvements</h2>
 <ul>
-  <li>Mobile app integration</li>
-  <li>Larger training dataset</li>
-  <li>Model optimization for faster inference</li>
+  <li>Mobile-first deployment for real-time user interaction</li>
+  <li>Expanded dataset for improved generalization</li>
+  <li>Model optimization for faster inference and lower compute cost</li>
 </ul>
+</div>
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing AI/ML projects, systems work, and engineering experience.
 
-🔗 Live Site: https://vihaank1.github.io
+🔗 https://vihaank1.github.io
 
 ---
 

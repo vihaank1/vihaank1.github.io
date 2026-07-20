@@ -1,75 +1,118 @@
-# Vihaan Kesharwani – Portfolio
+# Vihaan Kesharwani | AI Systems Engineer
 
-Personal portfolio website showcasing AI/ML projects, systems work, and engineering experience.
+Personal engineering portfolio showcasing AI systems, machine learning applications, backend development, and scalable software projects.
 
-🔗 https://vihaank1.github.io
-
----
-
-## 🚀 Overview
-
-This portfolio highlights my work in building AI-powered systems and scalable backend applications, with a focus on real-world impact and system design.
-
-Featured projects include:
-- DogArmor AI – Computer vision system for posture-based recommendations
-- LLM-based biomedical pipeline
-- Data integration & GenAI chatbot system
+🌐 Portfolio:
+https://vihaank1.github.io
 
 ---
 
-## 🧠 Focus Areas
+# About
 
-- Machine Learning & AI Systems
-- Backend & API Development
-- Data Pipelines & Automation
-- System Design & Scalability
+I am a Computer Science student at the University of Georgia focused on building intelligent software systems.
 
----
+My work explores the intersection of:
 
-## 🏗️ Site Structure
+- Artificial Intelligence
+- Machine Learning
+- Computer Vision
+- Backend Engineering
+- System Design
 
-- Landing Page (Introduction + Links)
-- About Section
-- Featured Projects
-- Experience
-- Leadership
-- Skills
-- Contact
+I enjoy building systems that transform ideas into practical applications.
 
 ---
 
-## ⚙️ Built With
+# Featured Projects
 
-- HTML
-- CSS
-- :contentReference[oaicite:1]{index=1}
+## 🐶 DogArmor AI
 
----
+AI-powered computer vision platform exploring personalized dog gear recommendations.
 
-## 📌 Featured Project
+### Engineering Focus
 
-### DogArmor AI
-AI-powered system using YOLO for real-time posture-based recommendations.
+- Computer vision pipeline design
+- YOLO-based model exploration
+- Flask backend architecture
+- Modular AI system design
+- Dataset-driven improvement
 
-Key highlights:
-- Computer vision pipeline (image → model → API → output)
-- Modular backend design for scalability
-- Focus on real-time inference and usability
 
----
+Repository:
+https://github.com/DogArmor-Devs/dog-armor
 
-## 📈 What This Portfolio Emphasizes
-
-- End-to-end project ownership
-- Clear system design thinking
-- Real-world problem solving using AI
 
 ---
 
-## 🔮 Future Improvements
+## 🤖 AI Technical Interview Simulator
 
-- Add live demos for projects
-- Improve UI/UX polish
-- Expand project case studies
+LLM-powered platform designed to simulate realistic software engineering interviews.
+
+Focus areas:
+
+- AI conversations
+- Technical evaluation
+- Interview feedback
+- System design discussions
+
 
 ---
+
+## 🧬 Biomedical AI Pipeline
+
+Machine learning workflow exploring AI-assisted biomedical classification and automation.
+
+
+---
+
+# Technical Skills
+
+## Languages
+
+Python  
+Java  
+SQL  
+C#  
+JavaScript  
+
+
+## AI / ML
+
+PyTorch  
+Machine Learning  
+Computer Vision  
+LLMs  
+Data Processing  
+
+
+## Backend / Cloud
+
+Flask  
+REST APIs  
+Azure  
+Cloud Infrastructure  
+
+
+---
+
+# Engineering Philosophy
+
+I believe strong software comes from combining:
+
+1. Understanding the problem
+
+2. Designing scalable systems
+
+3. Building reliable implementations
+
+4. Iterating through feedback and data
+
+
+---
+
+# Currently Learning
+
+- Advanced Machine Learning
+- Large Language Model Applications
+- Scalable Backend Architecture
+- System Design

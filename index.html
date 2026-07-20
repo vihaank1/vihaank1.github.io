@@ -1,135 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Vihaan Kesharwani</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom right, #f8fafc, #eef2ff);
-      color: #0f172a;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .container {
-      padding: 60px 10%;
-      max-width: 900px;
-      margin: auto;
-    }
+<title>Vihaan Kesharwani | Software Engineer</title>
 
-    h1 { 
-      font-size: 48px; 
-      margin-bottom: 10px;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    h2 { 
-      margin-top: 70px; 
-      font-size: 26px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-    p { 
-      color: #475569; 
-      line-height: 1.6;
-    }
+<link rel="stylesheet" href="style.css">
 
-    .btn {
-      padding: 10px 20px;
-      margin-right: 10px;
-      background: #3b82f6;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #2563eb;
-      transform: translateY(-2px);
-    }
-
-    .card {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 14px;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: all 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-  </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="background">
 
-  <!-- HERO -->
-  <h1>Vihaan Kesharwani</h1>
-  <p>Computer Engineering @ UGA</p>
-  <p>Building AI-powered systems that solve real-world problems at scale.</p>
+<div class="blob blob1"></div>
 
-  <a class="btn" href="VihaanKesharwani_2026.03.pdf">Resume</a>
-  <a class="btn" href="https://github.com/vihaank1">GitHub</a>
+<div class="blob blob2"></div>
 
-  <!-- ABOUT -->
-  <h2>About Me</h2>
-  <p>
-    I build AI-powered systems end-to-end—from model development to scalable deployment.
-    Currently developing DogArmor AI and LLM-based research pipelines, with a focus on real-world impact and system design.
-  </p>
-
-  <!-- PROJECTS -->
-  <h2 id="projects">Projects</h2>
-
-  <div class="card">
-    <h3>DogArmor AI</h3>
-    <p>
-      AI-powered dog gear recommendation system with real-time pose estimation and low-latency inference.
-    </p>
-    <p>
-      End-to-end system built and deployed independently.
-    </p>
-    <a class="btn" href="https://github.com/DogArmor-Devs/dog-armor">GitHub</a>
-    <a class="btn" href="dogarmor.html">Case Study</a>
-  </div>
-
-  <div class="card">
-    <h3>LLM Biomedical Pipeline</h3>
-    <p>Automated blood-cell classification using LLM workflows.</p>
-  </div>
-
-  <div class="card">
-    <h3>Data Integration Chatbot</h3>
-    <p>Unified multi-source datasets with GenAI insights.</p>
-  </div>
-
-  <!-- EXPERIENCE -->
-  <h2>Experience</h2>
-  <p><b>Franklin Templeton</b> – Incoming Intern</p>
-  <p><b>UGA Research</b> – AI/ML Pipelines</p>
-  <p><b>DogArmor AI</b> – Founder</p>
-
-  <!-- LEADERSHIP -->
-  <h2>Leadership</h2>
-  <p>Founder, ACE Georgia – 200+ members, 22 initiatives</p>
-
-  <!-- SKILLS -->
-  <h2>Skills</h2>
-  <p>Python, Java, SQL | PyTorch, LLMs | Flask, APIs | Azure</p>
-
-  <!-- CONTACT -->
-  <h2>Contact</h2>
-  <p>Email: kesharwani.vihaan@gmail.com</p>
-  <p><a href="https://linkedin.com">LinkedIn</a></p>
+<div class="blob blob3"></div>
 
 </div>
 
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+Vihaan
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#experience">Experience</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a class="resume-btn" href="VihaanKesharwani_2026.03.pdf">
+
+Resume
+
+</a>
+
+<button id="theme-toggle">
+
+🌙
+
+</button>
+
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<p class="hero-small">
+
+Computer Engineering @ UGA
+
+</p>
+
+<h1>
+
+Building
+
+<span class="gradient">
+
+AI Systems
+
+</span>
+
+for Real World Impact.
+
+</h1>
+
+<p class="hero-description">
+
+Incoming Software Engineering Intern at Franklin Templeton.
+
+I enjoy building scalable backend systems, computer vision applications,
+and AI-powered software that solves real-world problems.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="primary-btn">
+
+View Projects
+
+</a>
+
+<a href="https://github.com/vihaank1" class="secondary-btn">
+
+GitHub
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<h2>
+
+About Me
+
+</h2>
+
+<div class="glass-card">
+
+<p>
+
+I'm a Computer Engineering student at the University of Georgia focused on
+building scalable software, AI systems, and backend infrastructure.
+
+My interests include machine learning, computer vision,
+distributed systems, and designing software that has real-world impact.
+
+Currently I'm building DogArmor AI alongside research involving
+LLM-powered biomedical pipelines and intelligent data systems.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="projects" class="section">
+
+<h2>
+
+Featured Projects
+
+</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<div class="emoji">
+
+🐶
+
+</div>
+
+<h3>
+
+DogArmor AI
+
+</h3>
+
+<p>
+
+AI-powered posture analysis platform using computer vision,
+Flask APIs, and scalable backend architecture.
+
+</p>
+
+<div class="tags">
+
+<span>Python</span>
+
+<span>YOLO</span>
+
+<span>Flask</span>
+
+<span>Azure</span>
+
+</div>
+
+<div class="project-links">
+
+<a href="dogarmor.html">
+
+Case Study →
+
+</a>
+
+<a href="https://github.com/DogArmor-Devs/dog-armor">
+
+GitHub →
+
+</a>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<div class="emoji">
+
+🧬
+
+</div>
+
+<h3>
+
+Biomedical Pipeline
+
+</h3>
+
+<p>
+
+Automated blood-cell classification workflow using
+LLMs and AI-assisted biomedical research pipelines.
+
+</p>
+
+<div class="tags">
+
+<span>Python</span>
+
+<span>LLMs</span>
+
+<span>Automation</span>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<div class="emoji">
+
+💬
+
+</div>
+
+<h3>
+
+Data Integration Chatbot
+
+</h3>
+
+<p>
+
+Unified datasets with GenAI-powered insights
+and conversational analytics.
+
+</p>
+
+<div class="tags">
+
+<span>SQL</span>
+
+<span>APIs</span>
+
+<span>Azure</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience" class="section">
+
+<h2>
+
+Experience
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>
+
+2026
+
+</h3>
+
+<h4>
+
+Franklin Templeton
+
+</h4>
+
+<p>
+
+Incoming Software Engineering Intern
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+
+UGA Research
+
+</h3>
+
+<p>
+
+AI / Machine Learning Pipelines
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+
+DogArmor AI
+
+</h3>
+
+<p>
+
+Founder
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="leadership" class="section">
+
+<h2>
+
+Leadership
+
+</h2>
+
+<div class="glass-card leadership-card">
+
+<h3>
+
+ACE Georgia
+
+</h3>
+
+<div class="stats">
+
+<div>
+
+<h1>
+
+200+
+
+</h1>
+
+<p>
+
+Members
+
+</p>
+
+</div>
+
+<div>
+
+<h1>
+
+22
+
+</h1>
+
+<p>
+
+Initiatives
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="section">
+
+<h2>
+
+Tech Stack
+
+</h2>
+
+<div class="skills">
+
+<span>Python</span>
+
+<span>Java</span>
+
+<span>SQL</span>
+
+<span>C#</span>
+
+<span>PyTorch</span>
+
+<span>Flask</span>
+
+<span>Azure</span>
+
+<span>Git</span>
+
+<span>Docker</span>
+
+<span>REST APIs</span>
+
+<span>LLMs</span>
+
+<span>Linux</span>
+
+</div>
+
+</section>
+
+<section id="contact" class="section">
+
+<h2>
+
+Let's Connect
+
+</h2>
+
+<div class="contact-buttons">
+
+<a href="mailto:kesharwani.vihaan@gmail.com">
+
+Email
+
+</a>
+
+<a href="https://linkedin.com">
+
+LinkedIn
+
+</a>
+
+<a href="https://github.com/vihaank1">
+
+GitHub
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+Designed & Built by Vihaan Kesharwani © 2026
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

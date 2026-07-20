@@ -1,141 +1,717 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>DogArmor AI</title>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      background: #f8fafc;
-      color: #0f172a;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    h1 {
-      font-size: 40px;
-    }
+<title>DogArmor AI | Case Study</title>
 
-    h2 {
-      margin-top: 40px;
-      font-size: 24px;
-    }
+<link rel="stylesheet" href="style.css">
 
-    p {
-      color: #475569;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
-    .section {
-      margin-top: 20px;
-    }
+<style>
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
+.case-hero {
 
-    .diagram {
-      background: #e2e8f0;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      font-family: monospace;
-      text-align: center;
-    }
-  </style>
+padding:120px 10%;
+
+text-align:center;
+
+}
+
+
+.case-hero h1 {
+
+font-size:80px;
+
+}
+
+
+.case-gradient {
+
+background:
+linear-gradient(
+90deg,
+#2563eb,
+#7c3aed
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+.subtitle {
+
+max-width:700px;
+
+margin:30px auto;
+
+font-size:20px;
+
+color:#64748b;
+
+line-height:1.8;
+
+}
+
+
+
+.case-section {
+
+width:85%;
+
+max-width:1100px;
+
+margin:100px auto;
+
+}
+
+
+
+.case-card {
+
+background:white;
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
+
+}
+
+
+
+.architecture {
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:20px;
+
+margin-top:40px;
+
+}
+
+
+
+.arch-box {
+
+width:80%;
+
+padding:25px;
+
+text-align:center;
+
+border-radius:20px;
+
+background:#eff6ff;
+
+color:#2563eb;
+
+font-weight:700;
+
+}
+
+
+
+.arrow {
+
+font-size:30px;
+
+}
+
+
+
+.metrics {
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.metric {
+
+background:#f8fafc;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+
+
+.metric h3 {
+
+font-size:40px;
+
+color:#2563eb;
+
+}
+
+
+
+.tags {
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.tags span {
+
+background:#eff6ff;
+
+color:#2563eb;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+}
+
+
+</style>
+
 </head>
+
 
 <body>
 
-<h1>DogArmor AI</h1>
-<p><b>Real-time AI system using YOLO for posture-based recommendations with scalable backend design and modular retraining pipeline.
 
-</b></p>
+<div class="background">
 
-<!-- PROBLEM -->
-<div class="section">
-<h2>Problem</h2>
-<p>
-Pet owners struggle to select properly fitting and safe gear due to lack of personalized sizing and posture-based insights.
-Most solutions rely on generic breed-based recommendations, which fail to account for real-world variation in posture and body structure.
+<div class="blob blob1"></div>
+
+<div class="blob blob2"></div>
+
+<div class="blob blob3"></div>
+
+</div>
+
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+Vihaan
+
+</div>
+
+
+<a href="index.html">
+
+← Back
+
+</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="case-hero">
+
+
+<h1>
+
+DogArmor <span class="case-gradient">
+
+AI
+
+</span>
+
+</h1>
+
+
+<p class="subtitle">
+
+A real-time computer vision platform that analyzes dog posture
+and generates personalized gear recommendations using AI.
+
 </p>
+
+
+<div class="tags">
+
+<span>Python</span>
+
+<span>YOLO</span>
+
+<span>Flask</span>
+
+<span>Azure</span>
+
+<span>Computer Vision</span>
+
 </div>
 
-<!-- SOLUTION -->
-<div class="section">
-<h2>Solution</h2>
+
+</section>
+
+
+
+
+
+<section class="case-section">
+
+
+<div class="case-card">
+
+
+<h2>
+
+Problem
+
+</h2>
+
+
 <p>
-Designed and built an end-to-end AI system that analyzes dog posture using YOLO-based pose estimation and generates real-time gear recommendations.
-The system processes image inputs, extracts key body features, and maps them to optimized gear suggestions.
+
+Pet owners often struggle to choose properly fitting collars,
+harnesses, and equipment. Traditional solutions rely on generic
+breed recommendations and fail to account for differences in
+body structure, posture, and behavior.
+
 </p>
+
+
 </div>
 
-<!-- TECH STACK -->
-<div class="section">
-<h2>Tech Stack</h2>
+
+</section>
+
+
+
+
+
+
+<section class="case-section">
+
+
+<div class="case-card">
+
+
+<h2>
+
+Solution
+
+</h2>
+
+
 <p>
-Python, Flask, YOLO (Computer Vision), Azure
+
+DogArmor AI processes dog images using computer vision models,
+extracts posture-based features, and generates personalized
+recommendations through a scalable backend pipeline.
+
 </p>
+
+
 </div>
 
-<!-- ARCHITECTURE -->
-<div class="section">
-<h2>System Architecture</h2>
 
-<div class="diagram">
-  <b>Input Image</b> → <b>YOLO Model</b> → <b>Feature Extraction</b> → <b>Flask API</b> → <b>Recommendation Output</b>
+</section>
+
+
+
+
+
+
+
+
+<section class="case-section">
+
+
+<div class="case-card">
+
+
+<h2>
+
+System Architecture
+
+</h2>
+
+
+<div class="architecture">
+
+
+<div class="arch-box">
+
+Dog Image Input
+
 </div>
-  
+
+
+<div class="arrow">
+
+↓
+
+</div>
+
+
+<div class="arch-box">
+
+YOLO Pose Estimation Model
+
+</div>
+
+
+<div class="arrow">
+
+↓
+
+</div>
+
+
+<div class="arch-box">
+
+Feature Extraction
+
+</div>
+
+
+<div class="arrow">
+
+↓
+
+</div>
+
+
+<div class="arch-box">
+
+Flask API Backend
+
+</div>
+
+
+<div class="arrow">
+
+↓
+
+</div>
+
+
+<div class="arch-box">
+
+Recommendation Engine
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="case-section">
+
+
+<div class="case-card">
+
+
+<h2>
+
+Engineering Decisions
+
+</h2>
+
+
+<ul>
+
+
+<li>
+
+Selected YOLO architecture because real-time inference speed
+was critical.
+
+</li>
+
+
+<li>
+
+Separated model inference from backend logic to support
+future model upgrades.
+
+</li>
+
+
+<li>
+
+Designed modular pipelines for easier retraining and scaling.
+
+</li>
+
+
+<li>
+
+Built API-first architecture for future mobile integration.
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="case-section">
+
+
+<div class="case-card">
+
+
+<h2>
+
+Technical Challenges
+
+</h2>
+
+
+<ul>
+
+<li>
+
+Maintaining accuracy across different breeds,
+sizes, and poses.
+
+</li>
+
+
+<li>
+
+Creating reliable training data pipelines.
+
+</li>
+
+
+<li>
+
+Balancing inference speed with model accuracy.
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="case-section">
+
+
+<h2>
+
+Impact
+
+</h2>
+
+
+<div class="metrics">
+
+
+<div class="metric">
+
+<h3>
+
+AI
+
+</h3>
+
 <p>
-Built a modular pipeline separating model inference, feature extraction, and API logic to enable independent scaling and future model upgrades.
+
+Computer Vision Pipeline
+
 </p>
+
 </div>
 
-<!-- IMPACT -->
-<div class="section">
-<h2>Impact</h2>
-<ul>
-  <li>Enabled real-time recommendation generation with low-latency inference</li>
-  <li>Designed scalable backend architecture for iterative model improvements</li>
-  <li>Reduced reliance on manual sizing by automating posture-based analysis</li>
-</ul>
+
+
+<div class="metric">
+
+<h3>
+
+API
+
+</h3>
+
+<p>
+
+Scalable Backend
+
+</p>
+
 </div>
 
-<!-- CHALLENGES -->
-<div class="section">
-<h2>Challenges</h2>
-<ul>
-  <li>Maintaining pose estimation accuracy across diverse dog breeds and positions</li>
-  <li>Building a reliable labeled dataset for training and evaluation</li>
-  <li>Optimizing inference latency for near real-time performance</li>
-</ul>
+
+
+<div class="metric">
+
+<h3>
+
+Real-Time
+
+</h3>
+
+<p>
+
+Low Latency Inference
+
+</p>
+
 </div>
 
-<!-- ENGINEERING DEPTH -->
-<div class="section">
-<h2>Engineering Decisions</h2>
-<ul>
-  <li>Chose YOLO for fast inference speed over heavier models</li>
-  <li>Separated model and API layers for scalability</li>
-  <li>Designed pipeline to support continuous retraining and dataset expansion</li>
-</ul>
+
 </div>
 
-<!-- FUTURE -->
-<div class="section">
-<h2>Future Improvements</h2>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="case-section">
+
+
+<div class="case-card">
+
+
+<h2>
+
+Future Roadmap
+
+</h2>
+
+
 <ul>
-  <li>Mobile-first deployment for real-time user interaction</li>
-  <li>Expanded dataset for improved generalization</li>
-  <li>Model optimization for faster inference and lower compute cost</li>
+
+
+<li>
+
+Mobile application deployment.
+
+</li>
+
+
+<li>
+
+Expanded dataset for stronger generalization.
+
+</li>
+
+
+<li>
+
+Optimized inference for edge devices.
+
+</li>
+
+
+<li>
+
+Continuous model improvement pipeline.
+
+</li>
+
+
 </ul>
+
+
 </div>
+
+
+</section>
+
+
+
+
+
+<section class="case-section">
+
+
+<a class="primary-btn"
+href="https://github.com/DogArmor-Devs/dog-armor">
+
+View GitHub Repository →
+
+</a>
+
+
+</section>
+
+
+
+
+<script src="script.js"></script>
+
 
 </body>
+
+
 </html>

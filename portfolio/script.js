@@ -1,93 +1,184 @@
-/* =========================
-   DARK MODE TOGGLE
-========================= */
-
-const themeToggle = document.getElementById("theme-toggle");
-
-const savedTheme = localStorage.getItem("theme");
+/* ==========================
+   DARK MODE
+========================== */
 
 
-if (savedTheme === "dark") {
+const themeToggle = document.getElementById(
+    "theme-toggle"
+);
+
+
+const savedTheme =
+    localStorage.getItem("theme");
+
+
+if(savedTheme === "dark"){
 
     document.body.classList.add("dark");
 
-    themeToggle.textContent = "☀️";
+    if(themeToggle)
+        themeToggle.textContent="☀️";
 
 }
 
 
-themeToggle.addEventListener("click", () => {
+
+if(themeToggle){
+
+themeToggle.addEventListener(
+"click",
+()=>{
 
 
-    document.body.classList.toggle("dark");
+document.body.classList.toggle(
+    "dark"
+);
 
 
-    const darkMode =
-        document.body.classList.contains("dark");
-
-
-    if (darkMode) {
-
-        themeToggle.textContent = "☀️";
-
-        localStorage.setItem(
-            "theme",
-            "dark"
-        );
-
-    } else {
-
-        themeToggle.textContent = "🌙";
-
-        localStorage.setItem(
-            "theme",
-            "light"
-        );
-
-    }
-
-
-});
-
-
-
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
-
-
-const revealElements = document.querySelectorAll(
-    ".section, .project-card, .glass-card, .timeline-item"
+const dark =
+document.body.classList.contains(
+    "dark"
 );
 
 
 
-revealElements.forEach(element => {
+if(dark){
 
-    element.style.opacity = "0";
+    localStorage.setItem(
+        "theme",
+        "dark"
+    );
 
-    element.style.transform =
-        "translateY(40px)";
+    themeToggle.textContent="☀️";
 
-    element.style.transition =
-        "opacity .7s ease, transform .7s ease";
+}
+
+else{
+
+    localStorage.setItem(
+        "theme",
+        "light"
+    );
+
+    themeToggle.textContent="🌙";
+
+}
+
+
+});
+
+}
+
+
+
+
+/* ==========================
+   TERMINAL TYPING EFFECT
+========================== */
+
+
+const terminalOutputs =
+document.querySelectorAll(
+    ".terminal-output"
+);
+
+
+
+terminalOutputs.forEach(
+(element,index)=>{
+
+
+const text =
+element.textContent;
+
+
+element.textContent="";
+
+
+let character=0;
+
+
+
+setTimeout(()=>{
+
+
+const typing =
+setInterval(()=>{
+
+
+element.textContent +=
+text.charAt(character);
+
+
+character++;
+
+
+if(character >= text.length){
+
+clearInterval(typing);
+
+}
+
+
+
+},50);
+
+
+
+},index*1200);
+
+
 
 });
 
 
 
-const revealObserver = new IntersectionObserver(
-
-(entries)=>{
 
 
-entries.forEach(entry=>{
+/* ==========================
+   SCROLL REVEAL
+========================== */
+
+
+const revealElements =
+document.querySelectorAll(
+".section, .project-card, .glass-card, .timeline-item"
+);
+
+
+
+revealElements.forEach(
+element=>{
+
+element.style.opacity="0";
+
+element.style.transform=
+"translateY(40px)";
+
+element.style.transition=
+"all .8s ease";
+
+}
+
+);
+
+
+
+const observer =
+new IntersectionObserver(
+
+entries=>{
+
+
+entries.forEach(
+entry=>{
 
 
 if(entry.isIntersecting){
 
 
 entry.target.style.opacity="1";
+
 
 entry.target.style.transform=
 "translateY(0)";
@@ -103,7 +194,7 @@ entry.target.style.transform=
 
 {
 
-threshold:0.15
+threshold:.15
 
 }
 
@@ -111,91 +202,21 @@ threshold:0.15
 
 
 
-revealElements.forEach(element=>{
+revealElements.forEach(
+element=>{
 
-    revealObserver.observe(element);
+observer.observe(element);
 
 });
 
 
 
 
-/* =========================
-   ACTIVE NAV LINK
-========================= */
 
 
-const sections =
-document.querySelectorAll(
-"section"
-);
-
-
-const navLinks =
-document.querySelectorAll(
-".nav-links a"
-);
-
-
-
-window.addEventListener(
-"scroll",
-()=>{
-
-
-let current="";
-
-
-sections.forEach(section=>{
-
-
-const sectionTop =
-section.offsetTop - 150;
-
-
-if(window.scrollY >= sectionTop){
-
-current =
-section.getAttribute("id");
-
-}
-
-
-});
-
-
-
-navLinks.forEach(link=>{
-
-
-link.style.color="";
-
-
-if(
-link.getAttribute("href")
-===
-"#"+current
-){
-
-link.style.color =
-"#2563eb";
-
-}
-
-
-});
-
-
-}
-
-);
-
-
-
-
-/* =========================
-   NAVBAR SHRINK EFFECT
-========================= */
+/* ==========================
+   NAVBAR EFFECT
+========================== */
 
 
 const navbar =
@@ -213,25 +234,25 @@ window.addEventListener(
 if(window.scrollY > 50){
 
 
-navbar.style.padding =
-"12px 25px";
-
-
 navbar.style.boxShadow =
-"0 10px 30px rgba(0,0,0,.08)";
+"0 20px 50px rgba(0,0,0,.12)";
+
+
+navbar.style.padding =
+"12px 30px";
 
 
 }
 
-else {
-
-
-navbar.style.padding =
-"18px 25px";
+else{
 
 
 navbar.style.boxShadow =
 "none";
+
+
+navbar.style.padding =
+"18px 30px";
 
 
 }
@@ -242,9 +263,90 @@ navbar.style.boxShadow =
 
 
 
-/* =========================
-   PROJECT CARD TILT EFFECT
-========================= */
+
+
+/* ==========================
+ ACTIVE NAVIGATION
+========================== */
+
+
+const sections =
+document.querySelectorAll(
+"section[id]"
+);
+
+
+
+const links =
+document.querySelectorAll(
+".nav-links a"
+);
+
+
+
+window.addEventListener(
+"scroll",
+()=>{
+
+
+let current="";
+
+
+
+sections.forEach(
+section=>{
+
+
+const top =
+section.offsetTop - 200;
+
+
+
+if(window.scrollY >= top){
+
+current =
+section.id;
+
+}
+
+
+});
+
+
+
+links.forEach(
+link=>{
+
+
+link.style.color="";
+
+
+if(
+link.getAttribute("href")
+===
+"#"+current
+){
+
+link.style.color=
+"#2563eb";
+
+}
+
+
+});
+
+
+
+});
+
+
+
+
+
+
+/* ==========================
+ CARD TILT EFFECT
+========================== */
 
 
 const cards =
@@ -254,39 +356,43 @@ document.querySelectorAll(
 
 
 
-cards.forEach(card=>{
+cards.forEach(
+card=>{
 
 
 card.addEventListener(
 "mousemove",
-(e)=>{
+(event)=>{
 
 
 const rect =
 card.getBoundingClientRect();
 
 
+
 const x =
-e.clientX - rect.left;
+event.clientX -
+rect.left;
 
 
 const y =
-e.clientY - rect.top;
+event.clientY -
+rect.top;
 
 
 
 const rotateX =
-((y / rect.height)-0.5)*8;
+((y / rect.height)-.5)*8;
 
 
 const rotateY =
-((x / rect.width)-0.5)*8;
+((x / rect.width)-.5)*8;
 
 
 
 card.style.transform =
 `
-perspective(700px)
+perspective(800px)
 rotateX(${-rotateX}deg)
 rotateY(${rotateY}deg)
 translateY(-10px)
@@ -295,6 +401,8 @@ translateY(-10px)
 
 
 });
+
+
 
 
 card.addEventListener(
@@ -313,38 +421,38 @@ card.style.transform =
 
 
 
-/* =========================
-   SMOOTH BUTTON FEEDBACK
-========================= */
 
 
-const buttons =
+/* ==========================
+ BUTTON CLICK FEEDBACK
+========================== */
+
+
 document.querySelectorAll(
 "a"
-);
-
-
-
-buttons.forEach(button=>{
+)
+.forEach(
+button=>{
 
 
 button.addEventListener(
-"click",
+"mousedown",
 ()=>{
 
 
-button.style.transform =
+button.style.transform=
 "scale(.96)";
 
 
-setTimeout(()=>{
+});
 
 
-button.style.transform =
-"";
+button.addEventListener(
+"mouseup",
+()=>{
 
 
-},150);
+button.style.transform="";
 
 
 });
